@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TDxC Tatuquara — Ministério de Jovens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Logo TDxC Tatuquara" class="logo-img" onload="this.style.display='block'; this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+      <div class="logo">TDx<span>C</span> TATUQUARA</div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#celulas">Células</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="topo">
+  <div class="hero-inner">
+    <div class="hero-logo">
+      <img src="logo.png" alt="Logo TDxC Tatuquara" onload="this.style.display='block'; this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+      <span class="hero-logo-fallback">TD×C</span>
+    </div>
+    <div class="eyebrow">Ministério de Jovens</div>
+    <h1 class="display">TD<span class="x">×</span>C<br>TATUQUARA</h1>
+    <div class="hero-meta">
+      <div>Encontros<strong>Sábado 20h</strong></div>
+      <div>Região<strong>Tatuquara, Curitiba</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quem somos</div>
+      <h2 class="display">O Ministério</h2>
+    </div>
+
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <p>O TDxC Tatuquara é o ministério de jovens da nossa Ieta Tatuquara, um grupo de adolescentes e jovens que se reúne para crescer na fé, viver em comunidade e colocar a mão na obra. Aqui ninguém caminha sozinho a gente se encontra em célula, em cultos e em momentos que vão muito além do domingo.</p>
+        <p>Acreditamos que juventude não é só uma fase é um chamado. Por isso investimos em relacionamento de verdade, discipulado e serviço, formando jovens que conhecem a Palavra e vivem o que aprendem.</p>
+
+        <ul class="objetivos">
+          <li><b>Formar</b> Discipular jovens com identidade, propósito e uma fé que se sustenta fora da igreja.</li>
+          <li><b>Reunir</b> Criar comunidade real através das células, em cada bairro e realidade.</li>
+          <li><b>Enviar</b> Preparar líderes e servos que impactam suas casas, escolas e cidade.</li>
+        </ul>
+      </div>
+
+      <div class="sobre-photos">
+        <div class="ph"><img src="assets/sobre-2.jpeg" alt="Jovens sorrindo em um encontro do ministério TDxC Tatuquara"></div>
+        <div class="ph"><img src="assets/sobre-1.jpeg" alt="Jovem pregando a Palavra em um culto do TDxC Tatuquara"></div>
+        <div class="ph"><img src="assets/sobre-3.jpeg" alt="Momento de oração em um culto do TDxC Tatuquara"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= CELULAS ================= -->
+<section id="celulas">
+  <div class="wrap">
+    <div class="section-head celulas-head">
+      <div>
+        <div class="eyebrow">Comunidade</div>
+        <h2 class="display">Células</h2>
+      </div>
+      <div class="scroll-arrows">
+        <button id="celPrev" aria-label="Célula anterior">←</button>
+        <button id="celNext" aria-label="Próxima célula">→</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="celulas-scroll" id="celulasGrid"></div>
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-photo">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+      <img id="modalMainPhoto" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <div class="eyebrow">Célula</div>
+      <h3 id="modalName"></h3>
+      <p class="modal-meaning" id="modalMeaning"></p>
+
+      <div class="modal-info">
+        <div><div class="lbl">Horário</div><div class="val" id="modalTime"></div></div>
+        <div><div class="lbl">Telefone</div><div class="val" id="modalPhone"></div></div>
+        <div id="modalAddressWrap" style="grid-column:1/3;"><div class="lbl">Endereço</div><div class="val" id="modalAddress"></div></div>
+      </div>
+
+      <div class="modal-leaders">
+        <span class="lbl">Liderança</span>
+        <div class="leaders-row" id="modalLeaders"></div>
+      </div>
+
+      <div class="modal-strip" id="modalStrip"></div>
+
+      <a class="modal-insta" id="modalInstaLink" href="#" target="_blank" rel="noopener">Seguir no Instagram →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ================= LINKS ================= -->
+<section class="links-section" id="links">
+  <div class="wrap" style="padding-top:70px;padding-bottom:44px;">
+    <div class="section-head">
+      <div class="eyebrow">Conecte-se</div>
+      <h2 class="display">Links</h2>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:0;padding-bottom:70px;">
+    <div class="links-grid">
+      <a class="link-tile" href="https://share.google/skCOIA6Yk0GL3Lig7" target="_blank" rel="noopener">
+        <span class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span class="lname">Localização<span class="go">↗</span></span>
+      </a>
+      <a class="link-tile" href="https://www.instagram.com/tdxctatuquara?igsh=Z3RhN3ptendocW53" target="_blank" rel="noopener">
+        <span class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/></svg></span>
+        <span class="lname">Insta do Ministério<span class="go">↗</span></span>
+      </a>
+      <a class="link-tile" href="https://www.instagram.com/templodasaguiastatuquara?igsh=MXNqNzFoMXA5eHZjYg==" target="_blank" rel="noopener">
+        <span class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/></svg></span>
+        <span class="lname">Insta da Igreja<span class="go">↗</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Logo TDxC Tatuquara" class="logo-img" onload="this.style.display='block'; this.nextElementSibling.style.display='none';" onerror="this.style.display='none';">
+      <div class="logo">TDx<span style="color:var(--fg-dim)">C</span> TATUQUARA</div>
+    </div>
+    <p>© 2026 Ministério de Jovens TDxC Tatuquara. Feito com propósito.</p>
+  </div>
+</footer>
+
+<script>
+  // ---------- DADOS DAS CÉLULAS (edite aqui) ----------
+  // Troque nome, endereço, horário, telefone, insta, significado e fotos de cada célula.
+  // Deixe insta: "" quando a célula não tiver Instagram (o botão some sozinho).
+  const celulas = [
+    {
+      nome: "Qadosh",
+      significado: "Separados para Deus e vivendo para um propósito",
+      horario: "20h",
+      endereco: "R. Eleutério Burbello, 60 — Riacho Doce",
+      telefone: "(41) 99625-1017",
+      insta: "@celula.qadosh",
+      instaUrl: "https://www.instagram.com/celula.qadosh?igsh=MTU4czZ6aDB3dGQxNg==",
+      capa: "assets/celula-qadosh-capa.jpeg",
+      lideres: [
+        { nome: "Vick e Rafa", foto: "assets/lider-qadosh-vick-rafa.jpeg" }
+      ],
+      fotos: [
+        "assets/celula-qadosh-1.jpeg",
+        "assets/celula-qadosh-2.jpeg"
+      ]
+    },
+    {
+      nome: "For You",
+      significado: "Uma célula feita para você!",
+      horario: "20h",
+      endereco: "Rua Francisco Sarot, 366",
+      telefone: "(41) 99715-3952",
+      insta: "@foryoucelula",
+      instaUrl: "https://www.instagram.com/foryoucelula?igsh=aHk2MHZkYmRxanFn",
+      capa: "assets/celula-foryou-capa.jpeg",
+      lideres: [
+        { nome: "Manu", foto: "assets/lider-foryou-manu.jpeg" }
+      ],
+      fotos: [
+        "assets/celula-foryou-1.jpeg",
+        "assets/celula-foryou-2.jpeg",
+        "assets/celula-foryou-3.jpeg"
+      ]
+    },
+    {
+      nome: "Metanoia",
+      significado: "Uma mudança de mente e de coração que transforma a vida.",
+      horario: "20h",
+      endereco: "Rua Ângelo Tozin, 230, Casa 48 — Campo do Santana",
+      telefone: "(41) 99171-4037",
+      insta: "",
+      instaUrl: "",
+      capa: "assets/celula-metanoia-capa.jpeg",
+      lideres: [
+        { nome: "Marcelo e Janyce", foto: "assets/lider-metanoia-marcelo-janyce.jpeg" }
+      ],
+      fotos: [
+        "assets/celula-metanoia-1.jpeg",
+        "assets/celula-metanoia-2.jpeg"
+      ]
+    },
+    {
+      nome: "Influe",
+      significado: "Influenciando adolescentes.",
+      horario: "20h30",
+      endereco: "Rua João Batista Bettega Junior, 70",
+      telefone: "+55 41 99781-6438",
+      insta: "@influetatuquara",
+      instaUrl: "https://www.instagram.com/influetatuquara?igsh=MWgxdXBtN2h5cncxcg==",
+      capa: "assets/celula-influe-capa.jpeg",
+      lideres: [
+        { nome: "Pamela e Alan", foto: "assets/lider-influe-pamela-alan.jpeg" }
+      ],
+      fotos: [
+        "assets/celula-influe-1.jpeg",
+        "assets/celula-influe-2.jpeg",
+        "assets/celula-influe-3.jpeg"
+      ]
+    },
+  ];
+
+  const grid = document.getElementById('celulasGrid');
+  celulas.forEach((c, i) => {
+    const card = document.createElement('button');
+    card.className = 'celula-card';
+    card.setAttribute('aria-label', 'Ver detalhes da ' + c.nome);
+    card.innerHTML = `
+      <img src="${c.capa}" alt="Foto da ${c.nome}">
+      <div class="celula-label">
+        <span class="arrow">↗</span>
+        <div class="tag">Célula</div>
+        <h3>${c.nome}</h3>
+      </div>
+    `;
+    card.addEventListener('click', () => openModal(c));
+    grid.appendChild(card);
+  });
+
+  // setas do carrossel de células
+  const celPrev = document.getElementById('celPrev');
+  const celNext = document.getElementById('celNext');
+  function scrollCelulas(dir){
+    const card = grid.querySelector('.celula-card');
+    const step = card ? card.getBoundingClientRect().width + 22 : 290;
+    grid.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+  celPrev.addEventListener('click', () => scrollCelulas(-1));
+  celNext.addEventListener('click', () => scrollCelulas(1));
+  function updateArrows(){
+    const max = grid.scrollWidth - grid.clientWidth - 4;
+    celPrev.disabled = grid.scrollLeft <= 4;
+    celNext.disabled = grid.scrollLeft >= max;
+  }
+  grid.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+
+  const overlay = document.getElementById('modalOverlay');
+  function openModal(c){
+    document.getElementById('modalMainPhoto').src = c.capa;
+    document.getElementById('modalMainPhoto').alt = 'Foto da ' + c.nome;
+    document.getElementById('modalName').textContent = c.nome;
+    document.getElementById('modalMeaning').textContent = c.significado;
+    document.getElementById('modalTime').textContent = c.horario;
+    document.getElementById('modalAddress').textContent = c.endereco;
+    document.getElementById('modalPhone').textContent = c.telefone;
+
+    const leadersRow = document.getElementById('modalLeaders');
+    leadersRow.innerHTML = '';
+    c.lideres.forEach(l => {
+      const item = document.createElement('div');
+      item.className = 'leader-item';
+      item.innerHTML = `<div class="leader-photo"><img src="${l.foto}" alt="Foto de ${l.nome}, líder da célula ${c.nome}"></div><span class="leader-name">${l.nome}</span>`;
+      leadersRow.appendChild(item);
+    });
+
+    const instaLink = document.getElementById('modalInstaLink');
+    if (c.insta) {
+      instaLink.style.display = 'inline-flex';
+      instaLink.href = c.instaUrl;
+      instaLink.textContent = 'Seguir ' + c.insta + ' →';
+    } else {
+      instaLink.style.display = 'none';
+    }
+
+    const strip = document.getElementById('modalStrip');
+    strip.innerHTML = '';
+    c.fotos.forEach(src => {
+      const d = document.createElement('div');
+      d.className = 'ph';
+      d.innerHTML = `<img src="${src}" alt="Foto da ${c.nome}">`;
+      strip.appendChild(d);
+    });
+
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+  // mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>
