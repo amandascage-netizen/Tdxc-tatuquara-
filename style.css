@@ -106,6 +106,23 @@ nav{
 .nav-toggle{
   display:none !important;
 }
+@media(max-width:720px){
+  .nav-links{
+    display:flex !important;
+    align-items:center;
+    flex-direction:row;
+    gap:12px;
+    position:static;
+    transform:none !important;
+    background:none;
+    padding:0;
+    font-size:0.65rem;
+  }
+
+  .nav-toggle{
+    display:none !important;
+  }
+}
 
   /* ---------- HERO ---------- */
   .hero{
