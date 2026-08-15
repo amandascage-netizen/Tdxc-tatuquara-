@@ -326,38 +326,130 @@ nav{
   }
 
   /* ---------- LINKS ---------- */
-  .links-section{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .link-tile{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:18px;
-    padding:20px 20px;
-    display:flex;flex-direction:column;justify-content:space-between;gap:22px;
-    min-height:120px;
-    transition:background .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease;
-  }
-  .link-tile:hover{
-    background:var(--bg-alt);
-    border-color:var(--fg-faint);
-    transform:translateY(-6px);
-    box-shadow:0 20px 40px -18px rgba(0,0,0,0.7);
-  }
-  .link-tile .num{
-    color:var(--fg-dim);
-    width:34px;height:34px;border:1px solid var(--line);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    transition:border-color .3s ease, color .3s ease, background .3s ease;
-  }
-  .link-tile:hover .num{border-color:var(--white);color:var(--white);background:rgba(255,255,255,0.06);}
-  .link-tile .lname{font-family:'Bebas Neue';font-size:clamp(1.05rem,2.6vw,1.4rem);text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;gap:10px;}
-  .link-tile .lname .go{
-    font-family:'Inter';font-size:0.9rem;flex-shrink:0;
-    width:28px;height:28px;border-radius:50%;border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    transition:transform .3s ease, background .3s ease, color .3s ease, border-color .3s ease;
-  }
-  .link-tile:hover .lname .go{transform:translate(3px,-3px);background:var(--white);color:var(--bg);border-color:var(--white);}
+ /* ---------- LINKS ---------- */
+.links-section{
+  background:var(--bg-alt);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
 
-  @media(max-width:720px){.links-grid{grid-template-columns:1fr;}}
+.links-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.link-tile{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:20px;
+
+  padding:24px 20px;
+  min-height:240px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:20px;
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.link-tile:hover{
+  background:var(--bg-alt);
+  border-color:var(--fg-faint);
+  transform:translateY(-8px);
+  box-shadow:0 24px 45px -18px rgba(0,0,0,0.8);
+}
+
+.link-tile .num{
+  color:var(--fg-dim);
+
+  width:38px;
+  height:38px;
+
+  border:1px solid var(--line);
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:
+    border-color .3s ease,
+    color .3s ease,
+    background .3s ease;
+}
+
+.link-tile:hover .num{
+  border-color:var(--white);
+  color:var(--white);
+  background:rgba(255,255,255,0.06);
+}
+.link-tile .lname{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(1.15rem,2vw,1.5rem);
+  text-transform:uppercase;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.link-tile .lname .go{
+  font-family:'Inter',sans-serif;
+  font-size:0.9rem;
+  flex-shrink:0;
+
+  width:32px;
+  height:32px;
+
+  border-radius:50%;
+  border:1px solid var(--line);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease;
+}
+
+.link-tile:hover .lname .go{
+  transform:translate(4px,-4px);
+  background:var(--white);
+  color:var(--bg);
+  border-color:var(--white);
+}
+
+@media(max-width:900px){
+  .links-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:720px){
+  .links-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .link-tile{
+    min-height:210px;
+    padding:20px 16px;
+  }
+  .link-tile .lname{
+    font-size:1.1rem;
+  }
+}
 
   /* ---------- FOOTER ---------- */
   footer{padding:48px 0;}
