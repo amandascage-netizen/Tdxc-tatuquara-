@@ -194,7 +194,7 @@ nav{
     font-size:0.98rem;color:var(--fg-dim);
   }
   .objetivos li b{
-    font-family:'Bebas Neue';color:var(--white);font-size:1.2rem;min-width:150px;letter-spacing:0.02em;
+    font-family:'Bebas Neue';color:var(--white);font-size:1.5rem !important;min-width:150px;letter-spacing:0.02em;
   }
   .sobre-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   .sobre-photos .ph{aspect-ratio:1/1;overflow:hidden;background:var(--bg-alt);border:1px solid var(--line);}
