@@ -405,8 +405,16 @@ nav{
   .celula-card:hover .arrow{transform:rotate(45deg);border-color:var(--white);}
 
   @media(max-width:560px){
-    .celula-card{width:74vw;}
+  .celulas-scroll{
+    padding-left:calc(50vw - 37vw);
+    padding-right:calc(50vw - 37vw);
   }
+
+  .celula-card{
+    width:74vw;
+    scroll-snap-align:center;
+  }
+}
 
   /* ---------- MODAL ---------- */
   .modal-overlay{
