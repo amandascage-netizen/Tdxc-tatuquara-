@@ -437,34 +437,33 @@ nav{
 @media(max-width:720px){
   .links-grid{
     grid-template-columns:repeat(4,1fr);
-    gap:6px;
+    gap:8px;
   }
 
   .link-tile{
-    min-height:110px;
-    padding:10px 7px;
-    border-radius:12px;
-    gap:4px;
+    min-height:145px;
+    padding:14px 10px;
+    border-radius:14px;
+    gap:8px;
     justify-content:flex-start;
   }
 
   .link-tile .num{
-    width:24px;
-    height:24px;
+    width:30px;
+    height:30px;
   }
 
   .link-tile .lname{
-    font-size:0.7rem;
-    gap:3px;
+    font-size:0.85rem;
+    gap:4px;
   }
 
   .link-tile .lname .go{
-    width:20px;
-    height:20px;
-    font-size:0.65rem;
+    width:24px;
+    height:24px;
+    font-size:0.7rem;
   }
 }
-
   /* ---------- FOOTER ---------- */
   footer{padding:48px 0;}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
