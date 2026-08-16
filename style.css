@@ -226,54 +226,116 @@ nav{
   font-weight:700;
 }
 
+/* ---------- INFORMAÇÕES DO CULTO ---------- */
+
 .culto-info{
-  margin-top:38px;
-  padding-top:24px;
-  border-top:1px solid var(--line);
+  margin-top:42px;
+  padding-left:20px;
 
-  display:grid;
-  grid-template-columns:1fr 1fr 2fr;
-  gap:30px;
-}
+  border-left:3px solid var(--fg-faint);
 
-.culto-info div{
   display:flex;
   flex-direction:column;
-  gap:7px;
+  gap:16px;
 }
 
-.culto-info span{
-  color:var(--fg-faint);
-  font-size:0.68rem;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  font-weight:600;
+.culto-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:42px;
 }
 
-.culto-info strong{
+.culto-icon{
+  width:40px;
+  height:40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:var(--white);
+
+  border:1px solid var(--line);
+  border-radius:50%;
+
+  background:var(--bg-card);
+
+  flex-shrink:0;
+
+  transition:
+    color .3s ease,
+    border-color .3s ease,
+    background .3s ease,
+    transform .3s ease;
+}
+
+.culto-icon svg{
+  width:19px;
+  height:19px;
+}
+
+.culto-row:hover .culto-icon{
+  color:var(--white);
+  border-color:var(--fg-faint);
+  background:var(--bg-alt);
+  transform:scale(1.05);
+}
+
+.culto-row strong{
   color:var(--white);
   font-family:'Bebas Neue',sans-serif;
-  font-size:1.35rem;
-  letter-spacing:0.03em;
+  font-size:1.55rem;
+  letter-spacing:0.05em;
+  font-weight:700;
   text-transform:uppercase;
 }
 
+.culto-dot{
+  color:var(--fg-faint);
+  font-size:1.4rem;
+  font-weight:700;
+}
+
+/* ---------- CELULAR ---------- */
+
 @media(max-width:720px){
+
   .culto-text p{
     font-size:0.98rem;
     line-height:1.7;
   }
 
   .culto-info{
-    grid-template-columns:1fr 1fr;
-    gap:24px;
+    margin-top:32px;
+    padding-left:16px;
+    border-left-width:3px;
+    gap:14px;
   }
 
-  .culto-info div:last-child{
-    grid-column:1 / 3;
+  .culto-row{
+    gap:11px;
+  }
+
+  .culto-icon{
+    width:36px;
+    height:36px;
+  }
+
+  .culto-icon svg{
+    width:17px;
+    height:17px;
+  }
+
+  .culto-row strong{
+    font-size:1.25rem;
+    line-height:1.2;
+  }
+
+  .culto-dot{
+    font-size:1.1rem;
   }
 }
-
   /* ---------- CELULAS ---------- */
   .celulas-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
   .scroll-arrows{display:flex;gap:10px;}
