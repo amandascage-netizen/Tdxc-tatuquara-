@@ -216,9 +216,10 @@ nav{
 
 .culto-text p{
   color:var(--fg-dim);
-  font-size:1.05rem;
   line-height:1.8;
-  max-width:850px;
+  font-size:1.02rem;
+  margin-bottom:20px;
+  max-width:none;
 }
 
 /* ---------- INFORMAÇÕES DO CULTO ---------- */
