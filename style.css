@@ -325,7 +325,6 @@ nav{
     .modal-body{padding:26px;}
   }
 
-  /* ---------- LINKS ---------- */
  /* ---------- LINKS ---------- */
 .links-section{
   background:var(--bg-alt);
@@ -349,8 +348,8 @@ nav{
 
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  gap:20px;
+  justify-content:flex-start;
+  gap:6px;
 
   transition:
     background .3s ease,
@@ -398,7 +397,7 @@ nav{
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
-  gap:10px;
+  gap:20px;
 }
 
 .link-tile .lname .go{
@@ -435,19 +434,34 @@ nav{
     grid-template-columns:repeat(2,1fr);
   }
 }
-
 @media(max-width:720px){
   .links-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
   }
 
   .link-tile{
-    min-height:210px;
-    padding:20px 16px;
+    min-height:110px;
+    padding:10px 7px;
+    border-radius:12px;
+    gap:4px;
+    justify-content:flex-start;
   }
+
+  .link-tile .num{
+    width:24px;
+    height:24px;
+  }
+
   .link-tile .lname{
-    font-size:1.1rem;
+    font-size:0.7rem;
+    gap:3px;
+  }
+
+  .link-tile .lname .go{
+    width:20px;
+    height:20px;
+    font-size:0.65rem;
   }
 }
 
