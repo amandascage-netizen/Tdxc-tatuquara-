@@ -221,11 +221,6 @@ nav{
   max-width:850px;
 }
 
-.culto-text p strong{
-  color:var(--white);
-  font-weight:700;
-}
-
 /* ---------- INFORMAÇÕES DO CULTO ---------- */
 
 .culto-info{
@@ -336,6 +331,7 @@ nav{
     font-size:1.1rem;
   }
 }
+
   /* ---------- CELULAS ---------- */
   .celulas-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
   .scroll-arrows{display:flex;gap:10px;}
