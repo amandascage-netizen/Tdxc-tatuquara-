@@ -204,6 +204,76 @@ nav{
     .sobre-grid{grid-template-columns:1fr;gap:40px;}
   }
 
+/* ---------- CULTO TDxC ---------- */
+
+.culto-section{
+  background:var(--bg);
+}
+
+.culto-content{
+  max-width:900px;
+}
+
+.culto-text p{
+  color:var(--fg-dim);
+  font-size:1.05rem;
+  line-height:1.8;
+  max-width:850px;
+}
+
+.culto-text p strong{
+  color:var(--white);
+  font-weight:700;
+}
+
+.culto-info{
+  margin-top:38px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+
+  display:grid;
+  grid-template-columns:1fr 1fr 2fr;
+  gap:30px;
+}
+
+.culto-info div{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.culto-info span{
+  color:var(--fg-faint);
+  font-size:0.68rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+.culto-info strong{
+  color:var(--white);
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.35rem;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+}
+
+@media(max-width:720px){
+  .culto-text p{
+    font-size:0.98rem;
+    line-height:1.7;
+  }
+
+  .culto-info{
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+
+  .culto-info div:last-child{
+    grid-column:1 / 3;
+  }
+}
+
   /* ---------- CELULAS ---------- */
   .celulas-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
   .scroll-arrows{display:flex;gap:10px;}
