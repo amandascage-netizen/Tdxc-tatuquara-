@@ -347,13 +347,22 @@ nav{
   .scroll-arrows button:disabled{opacity:0.3;cursor:default;}
   .scroll-arrows button:disabled:hover{background:var(--bg-alt);color:var(--fg);border-color:var(--line);}
 
-  .celulas-scroll{
-    display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;
-    padding:10px max(24px, calc((100vw - 1140px) / 2 + 24px)) 34px;
-    margin-top:44px;
-    scrollbar-width:none;
-    -ms-overflow-style:none;
-  }
+.celulas-scroll{
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-padding-left:50%;
+  scroll-padding-right:50%;
+  padding:10px 50% 34px;
+  margin-top:44px;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+
+.celulas-scroll::-webkit-scrollbar{
+  display:none;
+}
   .celulas-scroll::-webkit-scrollbar{display:none;}
 
   .celula-card{
